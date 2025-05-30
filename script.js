@@ -80,8 +80,7 @@ async function fetchWeather(city) {
 
 searchButton.addEventListener("click", () => {
     const city = searchInput.value.trim();
-    console.log(cityName);
-    // cityName.style.innerHTML=<h1>${city}</h1>
+    cityName.textContent = city ? `Weather in ${city}` : "Weather in your city";
     if (city) {
         fetchWeather(city);
     } else {

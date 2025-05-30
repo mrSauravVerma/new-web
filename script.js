@@ -80,10 +80,21 @@ async function fetchWeather(city) {
 
 searchButton.addEventListener("click", () => {
     const city = searchInput.value.trim();
-    cityName.textContent = city ? `Weather in ${city}` : "Weather in your city";
+    cityName.textContent = `Weather in ${city}` ;
     if (city) {
         fetchWeather(city);
     } else {
         alert("Please enter a city name");
+    }
+});
+searchInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        const city = searchInput.value.trim();
+        cityName.textContent = `Weather in ${city}`;
+        if (city) {
+            fetchWeather(city);
+        } else {
+            alert("Please enter a city name");
+        }
     }
 });

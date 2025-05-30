@@ -55,10 +55,10 @@ body {
     font-weight: bold;
 }
 
-.search-bar button:hover {
-    background: #7bfada;
+.Hover:hover {
+    color: #002c2e;
     transform: scale(1.05);
-    transition: background 0.3s, transform 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 /* Main Weather Section */
